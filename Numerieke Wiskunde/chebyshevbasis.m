@@ -6,9 +6,9 @@ function v chebyshevbasis (y, j)
     for i = 1:length(y)
     
         switch j
-            case 0
-                v(i) = 1;
             case 1
+                v(i) = 1;
+            case 2
                 v(i) = y(i);
             otherwise 
                 a = 1;
