@@ -15,7 +15,7 @@ function v chebyshevbasis (y, j)
                 b = y(i);
             
                 for k = 3:j
-                    c = 2*y(i)*a - b;
+                    c = 2*y(i)*b - a;
                     a = b;
                     b = c;
                 end
