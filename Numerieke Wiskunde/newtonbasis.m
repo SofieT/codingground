@@ -6,8 +6,8 @@ function v newtonbasis(y, j, x)
     a = y(i);
     b = 1;
     
-        if (j > 1)
-            for k = 1:(j - 1)
+        if (j > 0)
+            for k = 1:j
                 c = x(k);
                 b = b * (a - c);
             end
