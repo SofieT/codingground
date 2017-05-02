@@ -7,13 +7,13 @@ function p interpolerende_veelterm(x, fun, type)
    end
    
    switch type
-        case "monomiaal"
+        case 'monomiaal'
             A = evalbasis(x, length(x), @monomiaalbasis);            
-        case "lagrange"
+        case 'lagrange'
             A = evalbasis(x, length(x), @langrangebasis, x);
-        case "newton"
+        case 'newton'
             A = evalbasis(x, length(x), @newtonbasis, x);
-        case "chebyshev"
+        case 'chebyshev'
             A = evalbasis(x, length(x), @chebyshevbasis);
    end 
    
