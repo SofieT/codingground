@@ -18,7 +18,7 @@ function p interpolerende_veelterm(x, fun, type)
    end 
    
    coef = A\v;
-   val = @evalueer;
-   p = struct(coef, val);
+   val = @(y)evalueer(x, coef, type, y);
+   p = struct(coef, val(y));
    
 end
