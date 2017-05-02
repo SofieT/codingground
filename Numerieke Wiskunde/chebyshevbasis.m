@@ -6,15 +6,15 @@ function v chebyshevbasis (y, j)
     for i = 1:length(y)
     
         switch j
-            case 1
+            case 0
                 v(i) = 1;
-            case 2
+            case 1
                 v(i) = y(i);
             otherwise 
                 a = 1;
                 b = y(i);
             
-                for k = 3:j
+                for k = 2:j
                     c = 2*y(i)*b - a;
                     a = b;
                     b = c;
