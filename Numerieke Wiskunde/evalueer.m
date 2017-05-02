@@ -1,10 +1,14 @@
-function v evalueer(x, basisfun, coef, type, y)
+function v evalueer(x, coef, type, y)
   
   switch type
-      case ('monomiaal' || 'chebyshev')
-          A = evalbasis(y, length(y), basisfun);
+      case 'monomiaal'
+          A = evalbasis(y, length(y), @monomiaalbasis);
+      case 'langrange'
+          A = evalbasis(y, length(y), @lagrangebasis, x);
+      case 'newton'
+          A = evalbasis(y, length(y), @newtonbasis, x);
       otherwise
-          A = evalbasis(y, length(y), basisfun, x);
+          A = evalbasis(y, length(y), @chebyshevbasis);
   end
   
   v = A*coef;
